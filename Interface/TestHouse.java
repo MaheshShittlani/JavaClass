@@ -17,13 +17,6 @@ public class TestHouse {
         House h4 = (House)h1.clone();
         
         System.out.println(h1 == h4);
-        System.out.println(h1.equals(h4));
-
-        System.out.println("H1: "+h1);
-        System.out.println("H4: "+h4);
-
-        h1.setCreatedDate(new Date("23-may-2023"));
-        System.out.println("H1: "+h1);
-        System.out.println("H4: "+h4);
+        System.out.println(h1.getCreatedDate() == h4.getCreatedDate());
     }
 }

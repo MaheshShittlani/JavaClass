@@ -5,12 +5,10 @@ class ExceptionType1 {
         int a , b, c;
         float result;
 
-        Console con = System.console();
-        System.out.print("Enter any 3 numbers: ");
         try {
-            a = Integer.parseInt(con.readLine());
-            b = Integer.parseInt(con.readLine());
-            c = Integer.parseInt(con.readLine());
+            a = Integer.parseInt(args[0]);
+            b = Integer.parseInt(args[1]);
+            c = Integer.parseInt(args[2]);
             result = a / (b - c);
             System.out.println("Result = "+result);
         } catch(NumberFormatException e) {
