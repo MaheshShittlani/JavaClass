@@ -65,3 +65,99 @@ Integer wrapperNum = num;  // Autoboxing - int to Integer
 
 Integer wrapperNum = 42;  // Integer 	object
 int num = wrapperNum;  // Unboxing - Integer to int
+
+---------------------
+
+Autoboxing
+-------------
+	void sum(Integer x, Integer y) {
+	}
+	
+	
+	sum(new Integer(5), new Integer(10));
+	
+					OR
+	sum(5,10); // Autoboxing
+	
+Unboxing
+-----------
+	Integer i = 4;
+	int x = i.intValue() * 10;
+	
+		OR
+	int x = i * 10; // Unboxing
+	
+	
+	Integer i = 45;
+	Integer j = i * 2; // Autoboxing & Unboxing
+	
+-------------------------------
+Wrapper object to string conversion
+------------------------------
+
+Integer iobj = 20;
+1. iobj.toString();
+2. String s = iobj+""; // iobj.toString()+"";
+3. String s = Integer.valueOf(iobj);
+4. String s = String.format("The value of  iobj is %d",iobj);// Unboxing
+
+Primitive to String Conversion
+-----------------------------------
+int x = 20;
+
+1. Integer.toString(20);
+2. String s = x + "";
+3. String s = Integer.valueOf(x);
+4. String s = String.format("The value of  x is %d",x);
+
+------------------------------------------------
+
+String to primitive
+----------------------
+parseXXX() - Parsing methods, throws NumberFormatException for 
+invalid numbers;
+----------------------------
+1. 
+	String s = "20";
+	int x = Integer.parseInt(s); 
+	
+2. 
+	Integer iobj = new Integer(s);
+	int x = iobj.intValue();
+	
+----------------------------------------
+
+Integer class toString() methods - Provides multiple toString methods
+to convert an integer into multiple number formats.
+
+String s = Integer.toString(27,2);//11011 or Integer.toBinaryString(27);
+String s = Integer.toString(27); // 27
+String s = Integer.toString(27,10); // 27
+String s = Integer.toString(27,16); // B1 or Integer.toHexString(27)
+String s = Integer.toSting(27,11); 
+String s = Integer.toString(27,8); // 33  or Integer.toOctalSring(27)
+
+--------------------------------
+Final variable inside wrapper class
+------------------------------
+Integer.MIN_VALUE // -2147483648
+Integer.MAX_VALUE // 2147483647
+Integer.SIZE // 32
+Integer.BYTES // 4
+-----------------------------------------------------------
+
+java.math.BigInteger or java.math.BigDecimal
+---------------------------
+
+BigInteger & BigDecimal classes are used to handle large number and
+large precision with no limit on number and precision.
+
+If there is un-ended precision is encountered for BigDecimal class
+It will throw Arithmetic Exception.
+
+There are mehtods in these classes to perform arithmetic opertions.
+
+add()
+subtract()
+multiply()
+divide()
