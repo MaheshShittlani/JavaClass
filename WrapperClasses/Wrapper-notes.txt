@@ -1,0 +1,67 @@
+Wrapper class
+-------------------
+primitive types
+-----------------
+	1. byte
+	2. short
+	3. int
+	4. long
+	5. float
+	6. double
+	7. boolean
+	8. char
+In java, for each primitive type there is a class exist that encapsulate
+the functionality of primitive type and these classes are known as 
+Wrapper classes.
+
+	1. byte -> java.lang.Byte
+	2. short -> java.lang.Short
+	3. int -> java.lang.Integer
+	4. long -> java.lang.Long
+	5. float -> java.lang.Float
+	6. double -> java.lang.Double
+	7. boolean -> java.lang.Boolean
+	8. char -> java.lang.Character
+	
+java.lang.Number(A)
+	1. Byte
+	2. Short
+	3. Integer
+	4. Long
+	5. Float
+	6. Double
+	
+Number class methods
+-------------------------
+	1. byte byteValue()
+	2. short shortValue()
+	3. int intValue()
+	4. long longValue()
+	5. float floatValue()
+	6. double doubleValue()
+	
+-------------------------------
+
+Example:
+	Number num = 10.56;
+	System.out.println(num.intValue()) // 10
+	System.out.println(num.doubleValue()); //10.56
+
+----------------------------------------------
+
+Creating Wrapper object
+---------------------
+1. Integer iobj = new Integer(22);
+2. Integer iobj = new Integer("123");
+3. Integer iobj = Integer.valueOf("123")
+
+------------------------------------------------
+
+Autoboxing and Unboxing
+-------------------------
+
+int num = 42;  // Primitive int
+Integer wrapperNum = num;  // Autoboxing - int to Integer
+
+Integer wrapperNum = 42;  // Integer 	object
+int num = wrapperNum;  // Unboxing - Integer to int
