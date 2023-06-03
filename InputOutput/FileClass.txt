@@ -1,0 +1,45 @@
+File class
+----------------
+File(String path)
+File(String directory, String filename)
+File(File directory, String filename)
+
+--------------------------
+Methods
+-------------
+	String getName()
+	String getParent()
+	String getPath()
+	
+-----------------------
+Example: d:/myjava
+		d:/files
+	File f = new File("../files/a.txt");
+	f.getName(); a.txt
+	f.getPath(); ../files/a.txt
+	f.getParent(); ../files
+	
+	f.isAbsolute(); false
+	
+	f.getAbsolutePath(); d:/../files/a.txt
+	f.getCanonicalPath(); d:/files/a.txt
+	f.getAbsoluteFile();-> same as the getAbsolutePath, 
+	but returns the file object
+	f.getCanonicalFile();
+	
+	---------------------------------
+	f.isDirectory()
+	f.isFile()
+	f.exists()
+	f.createNewFile() throws IOException
+	f.isHidden()
+	f.canRead()
+	f.canWrite()
+	f.lastModified():long timestamp
+	f.setReadable(boolean)
+	f.setWriteable(boolean)
+	f.renameTo(File): rename & move
+	String[] f.list()
+	Files[] f.listFiles()
+	String[] f.list(java.io.FilenameFilter)
+	File[] f.listFiles(java.io.FilenameFilter);
