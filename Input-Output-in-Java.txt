@@ -1,0 +1,88 @@
+Input / Output in java (java.io.*)
+--------------------------------------
+	In java input/ output is performed through streams
+
+What is stream
+------------------
+	Source or Destination
+		Input Stream
+		Output Stream
+Types of Streams
+-------------------
+	1. Byte Stream
+		Read and Write data 1 byte at a time. It is used to deal with
+		binary data as it is saved in memory.
+		No conversion is happening while reading and writing data from
+		stream to memory.
+	2. Character Stream
+		It is used to read / Write data in character format, 1 character
+		at a time but in background data is stored in binary so character
+		stream is connected with binary stream to read / write binary
+		data and convert them into character.
+		So here the conversion from binary to character and character to 
+		binary is happening in background.
+	
+Input/Output Byte Stream class hierarchy
+----------------------------------
+Object
+-	InputStream(A)
+		FileInputStream
+		FilterInputStream
+					DataInputStream
+					BufferedInputStream
+		ObjectInputStream
+-	OutputStream(A)
+		FileOutputStream
+		FilterOutputStream
+					DataOutputStream
+					BufferedOutputStream
+		ObjectOutputStream
+		
+----------------------------------------
+java.io.InputStream(A) Methods
+	- int read(): Read one byte and return int version, return -1 for EOF
+	- int read(byte[] b): Read one byte and put it into array `b` and 
+						program reads data from array, Return how many 
+						bytes are successfully read.
+	- int read(byte[], int off, int len)
+	- void close()
+	- long skip(long n)
+
+java.io.OutputStream(A) Methods
+	- int write()
+	- int write(byte[])
+	- int write(byte[], int off, int len)
+	- void close()
+	- void flush()
+---------------------------------
+
+FileInputStream/ FileOutputStream
+	-Used to read and write from or to a file.
+	
+FileInputStream
+----------------------
+	-FileInputStream(String filename) throws FileNotFoundException
+	-FileInputStream(File file)
+	
+FileOutputStream
+-----------------------
+	- FileOutputStream(String filename)
+	- FileOutputStream(File file)
+	- FileOutputStream(String filename, boolean append)
+	- FileOutputStream(File file, boolean append)
+	
+-DataInputStream / DataOutputStream
+	- Usage
+	- Exercise Question: Write roll no, names and score in a file
+						Read back the data from file and display.
+				
+	- Exercise Question: DetectEndOfFile
+		-Filter Even/Odd from numbers.dat file
+		
+-BufferedInputStream / BufferedOutputStream
+	- BufferedInputStream(InputStream in) // 512 bytes of buffer
+	- BufferedInputStream(InputStream in, int bufferSize)
+	- BufferedOutputStream(OutputStream out)
+	- BufferedOutputStream(OutputStream out, int bufferSize)
+	
+Exercise: CopyFile
