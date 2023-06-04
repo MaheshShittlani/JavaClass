@@ -1,0 +1,3 @@
+Hello Print Stream.
+This will be visibleHello Print Writer
+This will not visible

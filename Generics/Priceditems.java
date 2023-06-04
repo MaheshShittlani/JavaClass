@@ -1,0 +1,5 @@
+interface Priceditems {
+   double getPrice();
+}
+
+

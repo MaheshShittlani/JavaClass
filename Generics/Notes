@@ -1,0 +1,59 @@
+Generics
+----------------
+What is Generics
+---------------
+It allows you to write reusable classes,interface and methods that can
+be run with multiple types and ensure the type safety.
+
+Note: Generic type only can be classes and interfaces.
+
+Why used Generics
+----------------------
+1. It allows to write reuable code with type safety
+2. The code is compiled once and can be used multipe times with different
+types.
+
+
+Generic Classes
+--------------------
+1. Create box class using Object
+2. Create box class using Generic
+
+Generic Methods
+--------------------
+	print - Should be able to print any type of array.
+	
+Bounds
+-------------
+	A type parameter can be restrict by passing specific type
+	for lower and upper bound.
+	
+UpperBound
+-------------
+		List<? extends Animal>
+		
+LowerBound
+		List<? super Integer>
+		
+
+Wildcard
+--------------
+Wildcard adds the flexiblity while working with generics
+
+1. ? represent and unknown type.
+2. ? extends Type, is a way to create upper bound.
+3. ? super Type, is a way to create lower bound.
+4. If no type is given for the replacement of ?, it becomes Object as 
+work same as it work before introducing generics.
+5. Unbounded wildcards
+	example:
+		processList(List<?> list) {
+		}
+Type Erasure
+--------------
+1. Generics in java uses type erasure, means the type parameter is 
+removed on complile time.
+2. Type parameter is replace with upper bound (or Object if no 
+upper bound)
+3. It ensure the backword compatility by replacing the type parameter
+with Object if no type is specified.

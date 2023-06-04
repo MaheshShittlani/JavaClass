@@ -37,6 +37,7 @@ Object
 					DataOutputStream
 					BufferedOutputStream
 		ObjectOutputStream
+	- PrintStream
 		
 ----------------------------------------
 java.io.InputStream(A) Methods
@@ -86,3 +87,41 @@ FileOutputStream
 	- BufferedOutputStream(OutputStream out, int bufferSize)
 	
 Exercise: CopyFile
+
+------------------------------------
+
+java.io.RandomAccessFile - Allows a file can be read in random manner.
+----------------------------
+
+RandomAccessFile(String file, String mode)
+RandomAccessFile(File file, String mode)
+
+mode
+---------
+	r
+	w
+	rw
+-----------------
+void seek(long bytes)->Move the cursor
+long getFilePointer() -> Get the poisition of the curson.
+
+length() -> Returns the length of the file
+setLength(long length)-> shorten the file length
+----------------------------------------
+Character Stream
+---------------------
+	Reader(A)
+		FileReader
+		FilterReader
+			- BufferedReader
+		InputStreamReader
+		CharArrayReader
+		StringReader
+		
+	Writer(A)
+		FileWriter
+		FilterWriter
+			-BufferedWriter
+		CharArrayWriter
+		StringWriter
+		PrintWriter
