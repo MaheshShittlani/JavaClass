@@ -1,0 +1,33 @@
+Collection Interface  Methods
+---------------------------------
+1. int size()
+2. boolean isEmpty()
+3. void clear()
+------------------------------
+
+Addition
+--------------
+    boolean add(E element)
+
+Remove
+------------------------
+    boolean remove(Object)
+
+Existance check
+----------------------
+    boolean contains(E Element)
+
+Set Operation
+-------------------------
+    addAll(Collection) ->   A.addAll(B) -> A Union B
+    removeAll(Collection) -> A.removeAll(B) ->   A - B
+    retainAll(Collection) -> A.retainAll(B) -> A subset B
+    containsAll(Collection) -> A.containsAll(B) -> A subset B
+---------------------------------------------------------
+
+equals() -> A.equals(B) -> A==B (deep compare)
+--------------------------------------------------
+
+Collection to Array
+----------------------
+T[] toArray();
