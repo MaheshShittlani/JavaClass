@@ -31,3 +31,79 @@ equals() -> A.equals(B) -> A==B (deep compare)
 Collection to Array
 ----------------------
 T[] toArray();
+
+
+Note: some of the Collection interface methods are not supported in Child class and throws
+java.lang.UnsupportedOperationException that is the child of RuntimeException.
+
+    public void someMethod() throws UnsupportedOperationException{
+        throws new UnsupportedOperationException("Operation not suppoerted");
+    }
+
+------------------------------------------------------------------------
+Java Collection framewroks support two types of containers
+    1. Storing collection of elements simply called collection
+    2. Storing data into key/value pair are called Maps.
+
+Set -> stores a group of non duplicate elements
+List -> stores an ordered collection of elements.
+Stack -> stores object that are processed in LIFO order
+Queue -> stores object that are processed in FIFO order
+PriorityQueue-> Store object thar are process in the order of their priority.
+
+
+List(I)
+------------------------------
+1. List extends Collection interface
+2. List is the collection of objects access in insertion order and allows the duplicate elements.
+3. Ordered -> Yes (Insertion Order)
+4. Duplicate Allowed -> Yes
+5. ArrayList(c) and LinkedList(c) are two implementaion of List interface.
+6. List allows you to access the elements from index.
+-----------------------------------------------
+
+List Methods
+--------------------
+    E get(int index)
+    set(int index, E)
+    add(int index, E)
+    addAll(int index, Collection)
+    remove(index index)
+    indexOf(E)
+    lastIndexOf(E)
+    subList(int startIndex, int endIndex)
+
+    listIterator()
+    listIterator(int startIndex)
+
+------------------------------------------
+    Iterator(I) -> UniDirectional
+    -----------------------
+        hasNext()
+        next()
+        remove() // Fail fast behavior- remove an index two time without moving to the next element throws and exception
+    ListIterator(I) -> BiDirectional
+    --------------------------
+        hasNext()
+        hasPrevious()
+        next()
+        previous()
+        remove()
+
+----------------------------------------
+
+ArrayList(C)
+--------------
+
+1. ArrayList is the implementation of List interface
+2. ArrayList -> Data Structure -> Growable Array
+3. Ordered ? -> Yes -> Insertion Order
+4. Index Accessiable -> Yes
+
+
+LinkedList(C)
+-------------------
+1. LinkedList is the implementaion of List Interface
+2. LinkedList -> Data Structure -> LinkedList
+3. Ordered ? -> Yes -> Insertion Order
+4. Index Accessiable -> Yes
