@@ -100,6 +100,13 @@ ArrayList(C)
 3. Ordered ? -> Yes -> Insertion Order
 4. Index Accessiable -> Yes
 
+Creating ArrayList constructors and Method
+------------------------------
+ArrayList
+ArrayList(Collection)
+ArrayList(int intialCapacity)
+trimToSize() ->  Shorten the array list
+
 
 LinkedList(C)
 -------------------
@@ -107,3 +114,127 @@ LinkedList(C)
 2. LinkedList -> Data Structure -> LinkedList
 3. Ordered ? -> Yes -> Insertion Order
 4. Index Accessiable -> Yes
+
+LinkedList constructors and methods
+-------------------------
+1. LinkedList()
+2. LinkedList(Collection)
+3. void addFirst(E element)
+4. void addLast(E element);
+5. E removeFirst()
+6. E removeLast()
+7. E getFirst()
+8. E getLast()
+
+Note:
+    List<String>colors =  Arrays.asList("red", "green", "blue")
+-------------------------------------
+
+Comparable & Comparator
+
+Vector and Stack class (Legacy Classes)
+-----------------------------
+1. Vector is a subclass of AbstractList
+2. Stack is a subclass of Vector
+3. Redesined in Java-2 but support the older functionality for compatablity.
+
+Vector V/S ArrayList
+-----------------------
+1. Vector and ArrayList are Same, except that Vector methods are synchronized (thread safe).
+2. Vector class is a Legacy class which is created before the collection framework and Redesined
+in collection framework.
+3. In Java-2, Vector is redesigned in such a way that it follows the consistant nature 
+of other classes and implement the common interfaces.
+
+
+Vector Constructor & Methods
+------------------------------
+Vector()
+Vector(Collection)
+Vector(int intialCapacity)
+Vector(int intialCapacity, int capacityIncrement)
+
+void addElement(E)
+int capacity()
+Enumeration elements()
+E elementAt(int index)
+E firstElement()
+E lastElement()
+void insertElementAt(int index, Object o)
+boolean removeAllElements()
+boolean removeElement(Object )
+boolean removeElementAt(int index)
+void setElementAt(int index, Object)
+void setSize(int size)
+void trimToSize()
+
+Note: Enumeration is same as Iterator that is induced before Java-2 and suppersed by Iterator
+in Java-2.
+
+Enumeration
+-----------------
+boolean hasMoreElements()
+E nextElement()
+
+Stack class
+-----------------
+Stack()
+boolean empty()
+E peek()
+E pop()
+E push(E)
+int search(E)
+
+-----------------------------------
+Queue & Priority Queue
+-----------------------------------
+
+In a priority Queue, the element with highest priority is removed first.
+
+Queue(I)
+----------
+boolean offer(E) - Adds a new element
+
+E poll()  
+E remove() 
+
+Note: poll() and remove methods are Same but poll return null when queue is empty
+remove throws the exception.
+
+E peek() 
+E element()
+
+Note: peek() and element methods are Same but peek return null when queue is empty
+element throws the exception.
+
+
+Deque(I)
+----------
+0. Deque -> Double Ended Queue
+1. Deque(I) extends the queue interface
+2. LinkedList(I) class implements the Deque(I), as Queue can be maintained by LinkedList also.
+3. addFirst(), addLast(), removeFirst(), removeLast(), getFirst(), getLast()
+
+Example of Implement queue using LinkedList
+
+Static Methods for Lists and Collections
+------------------------------------------------
+The Collections class contains static methods to perform operations in collection and a list.
+Collections class contains various static methods for searching, sorting, shuffling, copy, fill,
+
+1. void sort(List)
+2. void sort(List, Comparator)
+3. int binarySerach(List, Object searchTerm)
+4. int binarySerach(List, Object searchTerm, Comparator)
+5. void reverse(List)
+6. Comparator reverseOrder()
+7. void shuffle(List)
+8. void shuffle(List, Random)
+9. void copy(List dest, List src)
+10. List nCopies(int n, Object o)
+11. Object max(Collection)
+12. Object max(Collection, Comparator)
+13. Object min(Collection)
+14. Object min(Collection, Comparator)
+15. boolean disjoint(Collection c1, Collection c2)
+16. int frequency(Collection c, Object o)
