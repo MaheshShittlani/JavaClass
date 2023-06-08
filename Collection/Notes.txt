@@ -193,6 +193,7 @@ In a priority Queue, the element with highest priority is removed first.
 
 Queue(I)
 ----------
+add(E) -> 
 boolean offer(E) - Adds a new element
 
 E poll()  
@@ -238,3 +239,31 @@ Collections class contains various static methods for searching, sorting, shuffl
 14. Object min(Collection, Comparator)
 15. boolean disjoint(Collection c1, Collection c2)
 16. int frequency(Collection c, Object o)
+
+----------------------------------
+
+Set(I)
+------------
+1. Set is the chile of Collection(I)
+2. Set represent unique collection of data. If any duplicate element trying to add using add()
+method it don't add into the collection and return false.
+3. Set(I) Implementation
+    1. HashSet(C)
+    2. LinkedHashSet(C)
+    3. TreeSet(C)
+
+HashSet(C) class
+---------------------
+1. Store a unique collection of data.
+2. Background Datastructure -> Hash Table(Hashing Technique) -> Growable Array implementation
+3. Use the hashcode for hashing technique
+4. HashSet is an underorderd collection.
+
+LinkedHashSet(C)
+--------------------
+1. Child class of Set(C) class
+2. Don't allow duplicate elements
+3. Order -> Insertion Order
+4. Data Strurcture -> LinkedList used with hashing technique
+5. For hashing purpose, object hashcode() is used.
+
