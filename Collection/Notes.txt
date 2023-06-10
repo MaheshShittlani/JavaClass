@@ -254,16 +254,177 @@ method it don't add into the collection and return false.
 
 HashSet(C) class
 ---------------------
+Collection(I) -> AbstractSet(AC) -> HashSet(C) 
 1. Store a unique collection of data.
 2. Background Datastructure -> Hash Table(Hashing Technique) -> Growable Array implementation
 3. Use the hashcode for hashing technique
 4. HashSet is an underorderd collection.
+5. Two elements are considered duplicate if e1.equals(e2) and e1.hashCode() == e2.hashCode()
+
+Constructors
+----------------
+HashSet()
+HashSet(int intialCapacity)
+HashSet(Collection c)
+HashSet(int intialCapacity, float loadFactor) // default 16,0.75
+
 
 LinkedHashSet(C)
+
 --------------------
+Collection(I) -> AbstractSet(AC) -> HashSet(C) -> LinkedHashSet(C)
+
 1. Child class of Set(C) class
 2. Don't allow duplicate elements
 3. Order -> Insertion Order
 4. Data Strurcture -> LinkedList used with hashing technique
 5. For hashing purpose, object hashcode() is used.
 
+LinkedHashSet()
+LinkedHashSet(Collection C)
+LinkedHashSet(int initialCapacity)
+LinkedHashSet(int intialCapacity, float loadFactor)
+
+
+
+SortedSet(I)
+-------------------
+Collection(I) -> Set(I) -> SortedSet(I)
+---------------------------
+E first()
+E last()
+SortedSet<E> headSet(E)
+SortedSet<E> tailSet(E)
+
+
+NavigableSet(I)
+--------------------
+Collection(I) -> Set(I) -> SortedSet(I) -> NavigableSet(I)
+
+E pollFirst()
+E pollLast()
+E lower(E e)
+E higher(E e)
+E floor(E)
+E ceiling(E)
+
+
+TreeSet
+-------------
+Collection(I)->Set(I)->SortedSet(I)->NavigableSet(I)->TreeSet(C)
+1. TreeSet extends AbstractSet
+
+TreeSet()
+TreeSet(Collection c)
+TreeSet(Comparactor)
+TreeSet(SortedSet<E>)
+
+Program to count the keywords in a file
+
+Map
+------------------
+    Map is a container object that stores a collection of key/value pair.
+        The keys are like indexes.
+    Map can't contains duplicate keys.
+    3 Implementaion
+    ----------------
+        1. HashMap
+        2. LinkedHashMap
+        3. TreeMap
+
+Map Interfaces
+----------------
+    Map(I) -> SortedMap(I)    -> NavigableMap(I)
+    Map(I) -> AbstractMap(AC)
+
+
+Map methods
+---------
+    clear()
+    containsKey(E)
+    containsValue(E)
+    Set<Map.Entry<K,V>> entrySet()
+    V get(K key)
+    boolean isEmpty()
+    Set<K> keySet()
+    V put(K key, V value)
+    void putAll(Map<? extend K, ? extends V> m)
+    V remove(K key)
+    int size()
+    Collection<V> values()
+    void forEach(Consumer<? super K,? super V> action)
+
+Query Methods
+-----------------
+boolean containsKey()
+boolean containsValue()
+
+
+Map.Entry(I)
+    K getKey()
+    V getValue()
+    void setValue(V v)
+
+
+HashMap
+--------------
+    Map(I) -> AbstractMap(AC) -> HashMap(C)
+
+HashMap()
+HashMap(int intialCapacity, float loadFactor) // 16, 0.75
+HashMap(Map<? extends K, ? extends V> m)
+
+1. Order -> Unordered
+2. Duplicate Key -> Not allowed
+3. Duplication value -> Allowed
+4. How to identify a key is duplicate or not -> 
+    1. obj1.key == obj2.key
+    2. obj1.key.hashCode().equals(obj2.key.hashCode());
+5. Background Data Structur -> HashTable using growable array and implements like HashSet
+6. Need to override hashCode() and equals() method for user defined object.
+
+LinkedHashMap
+-----------------
+    Map(I) -> AbstractMap(AC) -> HashMap(C) -> LinkedHashMap(C)
+
+LinkedHashMap()
+LinkedHashMap(Map<? extends K, ? extends V> m)
+LinkeHashMap(int intialCapacity, float loadFactor, boolean accessOrder)
+
+1. Ordered -> Yes (Insertion Order by Key)
+2. Duplicate key Allowed -> No.
+3. Background Datastructure -> LinkedList
+
+
+SortedMap
+-------------------
+Map(I) -> SortedMap(I)
+
+K firstKey()
+V firstValue()
+Comparator<? super K> comparactor() 
+SortedMap<K,V> headMap(K toKey)
+SortedMap<K,V> tailMap(K toKey)
+
+1. Efficient in insertion, deletion and searching
+2. Not Ordered
+
+NavigableMap(I)
+--------------
+Map(I) -> SortedMap(I) -> NavigableMap(I)
+
+K floorKey(K key)
+K ceilinkKey(K key)
+K lowerKey(K key)
+K higherKey(K key)
+Map.Entry<K,V> pollFirstEntry()
+Map.Entry<K,V> pollLastEntry()
+
+
+TreeMap(C)
+-------------------
+Map(I) -> SortedMap(I) -> NavigableMap(I) -> TreeMap(C)
+
+1. TreeMap()
+2. TreeMap(Map<? extends K, ? extends V> m)
+3. TreeMap(Comparator <? super K> c)
